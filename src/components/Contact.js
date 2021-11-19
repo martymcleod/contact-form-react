@@ -16,7 +16,6 @@ function Contact()
 
     },  ]
     
- 
 
     return <div className="bg-red">
         {
