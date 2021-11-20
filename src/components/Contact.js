@@ -1,28 +1,19 @@
 import Input from './Input'
+import inputElement from '../elements/form-element'
+import Textarea from './Textarea'
 import '../contact.css'
 
-function Contact()
-{
-    const value = "votre nom"
-    const label = "Nom"
+const Contact = () => {
 
-    const inputElement = [{
-        label: 'nom',
-        value: 'Votre nom'
-
-    }, {
-        label: 'email',
-        value: 'Votre email'
-
-    },  ]
     
-
     return <div className="bg-red">
         {
          inputElement.map( elem => { 
        return  <Input value={elem.value} label={elem.label} />
         }) 
     }
+    <Textarea name="message" value="Ecrivez votre message" label="message"/>
+    <button>Envoyer</button>
     </div>
 }
 
